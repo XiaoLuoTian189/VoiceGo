@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线语音通话</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎤 在线语音通话</h1>
+            <p>输入相同的四位数字即可开始通话</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="room-section">
+                <div class="input-group">
+                    <label for="roomCode">房间号码 (4位数字):</label>
+                    <input type="text" id="roomCode" maxlength="4" placeholder="例如: 1234">
+                    <button id="joinRoom">加入房间</button>
+                </div>
+                
+                <div class="status" id="status">等待加入房间...</div>
+            </div>
+            
+            <div class="call-section" id="callSection" style="display: none;">
+                <div class="call-controls">
+                    <button id="muteBtn" class="control-btn">🔇 静音</button>
+                    <button id="hangupBtn" class="control-btn hangup">📞 挂断</button>
+                </div>
+                
+                <div class="call-info">
+                    <div class="room-info">房间号: <span id="currentRoom"></span></div>
+                    <div class="connection-status" id="connectionStatus">连接中...</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>使用WebRTC技术，支持实时语音通话</p>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
