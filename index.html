@@ -2,19 +2,31 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>在线语音通话</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>语音通话</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🎤 在线语音通话</h1>
+            <h1>语音通话</h1>
             <p>输入相同的四位数字即可开始通话</p>
+            <div class="user-info" id="userInfo" style="display: none;">
+                <span>欢迎，<span id="username"></span></span>
+                <button id="logoutBtn" class="logout-btn">退出登录</button>
+            </div>
         </div>
         
         <div class="main-content">
             <div class="room-section">
+                <div class="permission-notice">
+                    <h3>使用说明</h3>
+                    <p>• 请确保浏览器允许麦克风访问</p>
+                    <p>• 建议使用HTTPS访问以获得最佳体验</p>
+                    <p>• 支持Chrome、Firefox、Safari等现代浏览器</p>
+                    <button id="testAudioBtn" class="test-btn">测试音频设备</button>
+                </div>
+                
                 <div class="input-group">
                     <label for="roomCode">房间号码 (4位数字):</label>
                     <input type="text" id="roomCode" maxlength="4" placeholder="例如: 1234">
@@ -26,8 +38,9 @@
             
             <div class="call-section" id="callSection" style="display: none;">
                 <div class="call-controls">
-                    <button id="muteBtn" class="control-btn">🔇 静音</button>
-                    <button id="hangupBtn" class="control-btn hangup">📞 挂断</button>
+                    <button id="muteBtn" class="control-btn">静音</button>
+                    <button id="hangupBtn" class="control-btn hangup">挂断</button>
+                    <button id="debugBtn" class="control-btn debug">调试</button>
                 </div>
                 
                 <div class="call-info">
@@ -38,7 +51,10 @@
         </div>
         
         <div class="footer">
-            <p>使用WebRTC技术，支持实时语音通话</p>
+            <p>基于WebRTC技术，支持实时语音通话</p>
+            <div class="auth-links" id="authLinks">
+                <a href="login.html">登录</a> | <a href="register.html">注册</a>
+            </div>
         </div>
     </div>
     

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>用户注册 - 语音通话</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>用户注册</h1>
+                <p>创建您的语音通话账户</p>
+            </div>
+            
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input type="text" id="username" name="username" required 
+                           placeholder="请输入用户名（3-20个字符）" 
+                           minlength="3" maxlength="20">
+                    <div class="error-message" id="usernameError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" name="password" required 
+                           placeholder="请输入密码（至少6个字符）" 
+                           minlength="6">
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">确认密码</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required 
+                           placeholder="请再次输入密码">
+                    <div class="error-message" id="confirmPasswordError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender">性别</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">请选择性别</option>
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                        <option value="其他">其他</option>
+                    </select>
+                    <div class="error-message" id="genderError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="qq">QQ号码</label>
+                    <input type="text" id="qq" name="qq" required 
+                           placeholder="请输入QQ号码（5-11位数字）" 
+                           pattern="[0-9]{5,11}">
+                    <div class="error-message" id="qqError"></div>
+                </div>
+                
+                <button type="submit" id="registerBtn" class="auth-btn">
+                    <span class="btn-text">注册</span>
+                    <span class="btn-loading" style="display: none;">注册中...</span>
+                </button>
+            </form>
+            
+            <div class="auth-footer">
+                <p>已有账户？ <a href="login.html">立即登录</a></p>
+                <p><a href="index.html">返回首页</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="auth.js"></script>
+</body>
+</html>
