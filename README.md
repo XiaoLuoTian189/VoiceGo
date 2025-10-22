@@ -199,7 +199,7 @@ A: 部署检查清单：
 
 **小洛天** - 全栈开发者
 
-- GitHub: [@xiaoluotian](https://github.com/XiaoLuoTian189)
+- GitHub: [@XiaoLuoTian189](https://github.com/XiaoLuoTian189)
 
 ## 🙏 致谢
 
