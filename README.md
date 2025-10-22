@@ -1,4 +1,4 @@
-# 🎤 VoiceGo - 实时语音通话应用
+# VoiceGo - 实时语音通话应用
 
 <div align="center">
 
@@ -199,9 +199,7 @@ A: 部署检查清单：
 
 **小洛天** - 全栈开发者
 
-- GitHub: [@xiaoluotian](https://github.com/xiaoluotian)
-- 邮箱: your-email@example.com
-- 项目链接: [https://github.com/xiaoluotian/voicego](https://github.com/xiaoluotian/voicego)
+- GitHub: [@xiaoluotian](https://github.com/XiaoLuoTian189)
 
 ## 🙏 致谢
 
